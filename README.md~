@@ -1,0 +1,479 @@
+Last login: Wed May 10 11:32:05 on console
+josh@Joshs-Air ~ % git
+usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--super-prefix=<path>] [--config-env=<name>=<envvar>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone     Clone a repository into a new directory
+   init      Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add       Add file contents to the index
+   mv        Move or rename a file, a directory, or a symlink
+   restore   Restore working tree files
+   rm        Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect    Use binary search to find the commit that introduced a bug
+   diff      Show changes between commits, commit and working tree, etc
+   grep      Print lines matching a pattern
+   log       Show commit logs
+   show      Show various types of objects
+   status    Show the working tree status
+
+grow, mark and tweak your common history
+   branch    List, create, or delete branches
+   commit    Record changes to the repository
+   merge     Join two or more development histories together
+   rebase    Reapply commits on top of another base tip
+   reset     Reset current HEAD to the specified state
+   switch    Switch branches
+   tag       Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch     Download objects and refs from another repository
+   pull      Fetch from and integrate with another repository or a local branch
+   push      Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+See 'git help git' for an overview of the system.
+josh@Joshs-Air ~ % cd ~
+josh@Joshs-Air ~ % mkdir zero_day
+josh@Joshs-Air ~ % cd zero_day
+josh@Joshs-Air zero_day % git init
+Initialized empty Git repository in /Users/josh/zero_day/.git/
+josh@Joshs-Air zero_day % git add .
+josh@Joshs-Air zero_day % git config --global user.name "Josh Onadele"
+git config --global user.email "joshuaonadele@gmail.com"
+josh@Joshs-Air zero_day % git commit -m 'Setup'
+On branch main
+
+Initial commit
+
+nothing to commit (create/copy files and use "git add" to track)
+josh@Joshs-Air zero_day % cd ~
+josh@Joshs-Air ~ % ls
+Applications			Documents			Library				Music				Public				zero_day
+Desktop				Downloads			Movies				Pictures			monsterinsights-user-journey
+josh@Joshs-Air ~ % cd zero_day
+josh@Joshs-Air zero_day % ls
+josh@Joshs-Air zero_day % git init
+Reinitialized existing Git repository in /Users/josh/zero_day/.git/
+josh@Joshs-Air zero_day % git add .
+josh@Joshs-Air zero_day % git remote add origin https://github.com/joshonadele/zero_day.git       
+josh@Joshs-Air zero_day % touch README.md
+josh@Joshs-Air zero_day % ls
+README.md
+josh@Joshs-Air zero_day % emacs README.md
+zsh: command not found: emacs
+josh@Joshs-Air zero_day % cd ~
+josh@Joshs-Air ~ % brew install emacs
+
+Running `brew update --auto-update`...
+==> Downloading https://ghcr.io/v2/homebrew/portable-ruby/portable-ruby/blobs/sha256:61029cec31c68a1fae1fa90fa876adf43d0becff777da793f9b5c5577f00567a
+##################################################################################################################################################################################################### 100.0%
+==> Pouring portable-ruby-2.6.10_1.el_capitan.bottle.tar.gz
+==> Auto-updated Homebrew!
+Updated 2 taps (homebrew/core and homebrew/cask).
+==> New Formulae
+aarch64-elf-gdb              cloudpan189-go               gfold                        libdvbcsa                    ntfy                         scip                         typst
+access                       conan@1                      git-big-picture              libgedit-gtksourceview       ol                           sing-box                     victoriametrics
+ada-url                      conduit                      gitoxide                     libgit2@1.5                  opal                         smartdns                     virtualfish
+adr-viewer                   devcontainer                 go-feature-flag-relay-proxy  liblxi                       openssl@3.0                  sql-migrate                  vulkan-extensionlayer
+aftman                       dexter                       golines                      libvisual                    pfetch-rs                    ssocr                        vulkan-tools
+aichat                       dtools                       hck                          libvisual-plugins            pgvector                     staq                         vulkan-validationlayers
+aicommits                    dutree                       hexer                        libvisual-projectm           phoneinfoga                  streamvbyte                  vvdec
+aliyunpan                    elfx86exts                   hq                           libwpe                       picotool                     svlint                       vvenc
+amber                        enchive                      hz                           llvm@15                      pocketbase                   svls                         wally
+ares                         ffmpeg@5                     imessage-exporter            lpeg                         poke                         teip                         wazero
+arjun                        flavours                     jet                          mdt                          portal                       thriftgo                     wpebackend-fdo
+arttime                      forgit                       keyring                      meta-package-manager         quantum++                    tkey-ssh-agent               wxlua
+ata                          form                         kitex                        millet                       renovate                     trippy                       xurls
+benerator                    garble                       ksops                        musikcube                    resvg                        trurl                        zlint
+blocky                       gat                          lacework-cli                 nerdfix                      sad                          trust-dns                    zpaqfranz
+chatblade                    gcc@12                       libansilove                  notify                       safeint                      tt
+==> New Casks
+1kc-razer                                                           fujitsu-scansnap-home                                               piclist
+active-trader-pro                                                   garmin-express                                                      pololu-avr-programmer-v2
+alipay-key-tool                                                     genesys-cloud                                                       prism
+archaeology                                                         gitkraken-cli                                                       prolific-pl2303
+asix-ax88179                                                        gutenprint                                                          qflipper
+bazecor                                                             hdhomerun                                                           qmk-toolbox
+beardie                                                             hp-easy-start                                                       red-canary-mac-monitor
+bloop                                                               huiontablet                                                         reminders-menubar
+bluos-controller                                                    hummingbird                                                         rewind
+bookletcreator                                                      imazing-converter                                                   ricoh-theta
+bose-updater                                                        insta360-studio                                                     rsyncui
+caldigit-docking-utility                                            irpf2023                                                            saleae-logic
+caldigit-thunderbolt-charging                                       jabra-direct                                                        samsung-portable-ssd-t7
+cameracontroller                                                    karafun                                                             segger-jlink
+canon-eos-utility                                                   kiibohd-configurator                                                shureplus-motiv
+capacities                                                          konica-minolta-bizhub-c750i-driver                                  silicon-labs-vcp-driver
+carbide-create                                                      konica-minolta-bizhub-c759-c658-c368-c287-c3851-driver              sonos
+concept2-utility                                                    lg-onscreen-control                                                 sony-ps-remote-play
+corsair-icue                                                        linn-konfig                                                         stack
+creative                                                            lo-rain                                                             steelseries-engine
+cursor                                                              logi-options-plus                                                   steelseries-gg
+dadroit-json-viewer                                                 logitech-camera-settings                                            submariner
+ddpm                                                                logitech-g-hub                                                      synology-cloud-station-backup
+dehelper                                                            logitech-options                                                    synology-drive
+displaylink                                                         logitune                                                            synology-photo-station-uploader
+doppler                                                             macwhisper                                                          synology-surveillance-station-client
+droidcam-obs                                                        minisim                                                             synologyassistant
+dymo-label                                                          moneymanager                                                        tachidesk-sorayomi
+edrawmind                                                           mullvad-browser                                                     tiptoi-manager
+elgato-camera-hub                                                   music-miniplayer                                                    toshiba-color-mfp
+elgato-control-center                                               music-remote                                                        tuist
+elgato-game-capture-hd                                              music-widget                                                        ubiquiti-unifi-controller
+elgato-stream-deck                                                  nordic-nrf-command-line-tools                                       usmart-trade
+elgato-video-capture                                                nozbe                                                               vbrokers
+elgato-wave-link                                                    obsbot-webcam                                                       volta
+entry                                                               opal                                                                wacom-tablet
+eobcanka                                                            openbb-terminal                                                     wch-ch34x-usb-serial-driver
+fightcade                                                           openrocket                                                          xtool-creative-space
+focusrite-control                                                   orbstack                                                            yubico-authenticator
+focusrite-saffire-mixcontrol                                        orcaslicer                                                          yubico-yubikey-manager
+fractal-bot                                                         pallotron-yubiswitch                                                zed
+ftdi-vcp-driver                                                     philips-hue-sync                                                    zsa-wally
+
+You have 2 outdated formulae installed.
+
+==> Downloading https://formulae.brew.sh/api/formula.jws.json
+-=#=-  #      #        #                                                                                                                                                                                   
+==> Downloading https://formulae.brew.sh/api/cask.jws.json
+-=O=-   #      #         #          #                                                                                                                                                                      
+Warning: Treating emacs as a formula. For the cask, use homebrew/cask/emacs
+==> Fetching dependencies for emacs: ca-certificates, gmp, libunistring, libidn2, libtasn1, nettle, p11-kit, openssl@1.1, libevent, libnghttp2, unbound, gnutls and jansson
+==> Fetching ca-certificates
+==> Downloading https://ghcr.io/v2/homebrew/core/ca-certificates/manifests/2023-01-10
+##################################################################################################################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/ca-certificates/blobs/sha256:11fe9d0a98a2ac454fa1db95762a697c3340f46560ff27e5e9db8fdeb003f17e
+==> Downloading from https://pkg-containers.githubusercontent.com/ghcr1/blobs/sha256:11fe9d0a98a2ac454fa1db95762a697c3340f46560ff27e5e9db8fdeb003f17e?se=2023-05-14T17%3A15%3A00Z&sig=Ao4kPTyDkj%2FkpmPw8wEz
+##################################################################################################################################################################################################### 100.0%
+==> Fetching gmp
+==> Downloading https://ghcr.io/v2/homebrew/core/gmp/manifests/6.2.1_1
+##################################################################################################################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/gmp/blobs/sha256:e566452815d2ff5dc66da160bd1cd3d9cf02a17a07284cf0bac46496133383ae
+==> Downloading from https://pkg-containers.githubusercontent.com/ghcr1/blobs/sha256:e566452815d2ff5dc66da160bd1cd3d9cf02a17a07284cf0bac46496133383ae?se=2023-05-14T17%3A15%3A00Z&sig=TYwAc18f8%2BlCi9yM7EqX
+##################################################################################################################################################################################################### 100.0%
+==> Fetching libunistring
+==> Downloading https://ghcr.io/v2/homebrew/core/libunistring/manifests/1.1
+##################################################################################################################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/libunistring/blobs/sha256:55a30f8d2ad0058a9869751ccb9b7e949469cf20f29810e70ff2b7eff63a6762
+==> Downloading from https://pkg-containers.githubusercontent.com/ghcr1/blobs/sha256:55a30f8d2ad0058a9869751ccb9b7e949469cf20f29810e70ff2b7eff63a6762?se=2023-05-14T17%3A15%3A00Z&sig=nMOCUv9TCfQf9RciXhYrst
+##################################################################################################################################################################################################### 100.0%
+==> Fetching libidn2
+==> Downloading https://ghcr.io/v2/homebrew/core/libidn2/manifests/2.3.4_1-1
+##################################################################################################################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/libidn2/blobs/sha256:234beba5f85ebd599ede74b4963e2cc5d2595e05b15bbe5bd528c8bc852bdc1d
+==> Downloading from https://pkg-containers.githubusercontent.com/ghcr1/blobs/sha256:234beba5f85ebd599ede74b4963e2cc5d2595e05b15bbe5bd528c8bc852bdc1d?se=2023-05-14T17%3A15%3A00Z&sig=O6ZTmasjjCL7OXWYOMKQLt
+##################################################################################################################################################################################################### 100.0%
+==> Fetching libtasn1
+==> Downloading https://ghcr.io/v2/homebrew/core/libtasn1/manifests/4.19.0
+##################################################################################################################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/libtasn1/blobs/sha256:45a9352536560b5a69bef3e85ca615bad19d44eab23c6ad797c4305a27bd15d8
+==> Downloading from https://pkg-containers.githubusercontent.com/ghcr1/blobs/sha256:45a9352536560b5a69bef3e85ca615bad19d44eab23c6ad797c4305a27bd15d8?se=2023-05-14T17%3A15%3A00Z&sig=7xqsbrFDR%2BYdbuwecp9U
+##################################################################################################################################################################################################### 100.0%
+==> Fetching nettle
+==> Downloading https://ghcr.io/v2/homebrew/core/nettle/manifests/3.8.1
+##################################################################################################################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/nettle/blobs/sha256:48493dc5881e45b030b1f39d379fe70d6d8707063766c0f223e20e190d8de4ba
+==> Downloading from https://pkg-containers.githubusercontent.com/ghcr1/blobs/sha256:48493dc5881e45b030b1f39d379fe70d6d8707063766c0f223e20e190d8de4ba?se=2023-05-14T17%3A20%3A00Z&sig=ZMHOXmWv6HAUvy3fZ%2BfS
+##################################################################################################################################################################################################### 100.0%
+==> Fetching p11-kit
+==> Downloading https://ghcr.io/v2/homebrew/core/p11-kit/manifests/0.24.1_1
+##################################################################################################################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/p11-kit/blobs/sha256:0a34fda3209d79aa796026de51beb48d6a9d2d0e532c2fcd415371291ef29ce0
+==> Downloading from https://pkg-containers.githubusercontent.com/ghcr1/blobs/sha256:0a34fda3209d79aa796026de51beb48d6a9d2d0e532c2fcd415371291ef29ce0?se=2023-05-14T17%3A20%3A00Z&sig=E4eZdnkRlRZWgCJwbaMzMK
+##################################################################################################################################################################################################### 100.0%
+==> Fetching openssl@1.1
+==> Downloading https://ghcr.io/v2/homebrew/core/openssl/1.1/manifests/1.1.1t
+##################################################################################################################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/openssl/1.1/blobs/sha256:c357ccf7ece01905099a0cde58a2bbfb14141edb3aafed7d20391ed6bf726381
+==> Downloading from https://pkg-containers.githubusercontent.com/ghcr1/blobs/sha256:c357ccf7ece01905099a0cde58a2bbfb14141edb3aafed7d20391ed6bf726381?se=2023-05-14T17%3A20%3A00Z&sig=95x1%2B4JxrIf4d5LdiPpV
+##################################################################################################################################################################################################### 100.0%
+==> Fetching libevent
+==> Downloading https://ghcr.io/v2/homebrew/core/libevent/manifests/2.1.12
+##################################################################################################################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/libevent/blobs/sha256:45758b448d82b82b6bea52bc9a72593ef22f04ebdaa4b4230cadf12768252e22
+==> Downloading from https://pkg-containers.githubusercontent.com/ghcr1/blobs/sha256:45758b448d82b82b6bea52bc9a72593ef22f04ebdaa4b4230cadf12768252e22?se=2023-05-14T17%3A25%3A00Z&sig=9L1A2P%2FDxqo7J%2BZ7qx
+##################################################################################################################################################################################################### 100.0%
+==> Fetching libnghttp2
+==> Downloading https://ghcr.io/v2/homebrew/core/libnghttp2/manifests/1.53.0
+##################################################################################################################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/libnghttp2/blobs/sha256:3faee6450d6445d7fed1413ac1b8039e94fce368ff8b3e0c03b3f35ff92cef25
+==> Downloading from https://pkg-containers.githubusercontent.com/ghcr1/blobs/sha256:3faee6450d6445d7fed1413ac1b8039e94fce368ff8b3e0c03b3f35ff92cef25?se=2023-05-14T17%3A25%3A00Z&sig=BmnQpyWyYqkG0KsXMIocit
+##################################################################################################################################################################################################### 100.0%
+==> Fetching unbound
+==> Downloading https://ghcr.io/v2/homebrew/core/unbound/manifests/1.17.1
+##################################################################################################################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/unbound/blobs/sha256:55e865da9441e948209a775239c4217bd7d67aa6be6f18d1e794d078af7be1c7
+==> Downloading from https://pkg-containers.githubusercontent.com/ghcr1/blobs/sha256:55e865da9441e948209a775239c4217bd7d67aa6be6f18d1e794d078af7be1c7?se=2023-05-14T17%3A25%3A00Z&sig=SUKpQh%2Fnx3UZ3mmTr4bm
+##################################################################################################################################################################################################### 100.0%
+==> Fetching gnutls
+==> Downloading https://ghcr.io/v2/homebrew/core/gnutls/manifests/3.8.0
+##################################################################################################################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/gnutls/blobs/sha256:d1cddbab50cd28e1e84b57bb3c08e76c204626894bebf044c80fdb3c44d8a577
+==> Downloading from https://pkg-containers.githubusercontent.com/ghcr1/blobs/sha256:d1cddbab50cd28e1e84b57bb3c08e76c204626894bebf044c80fdb3c44d8a577?se=2023-05-14T17%3A30%3A00Z&sig=WSkDeaz%2FXyo7A1bqend%
+##################################################################################################################################################################################################### 100.0%
+==> Fetching jansson
+==> Downloading https://ghcr.io/v2/homebrew/core/jansson/manifests/2.14
+##################################################################################################################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/jansson/blobs/sha256:bb129dc922c0610c35a7b161429033a9123f03c4171df35717ff086b9cb52922
+==> Downloading from https://pkg-containers.githubusercontent.com/ghcr1/blobs/sha256:bb129dc922c0610c35a7b161429033a9123f03c4171df35717ff086b9cb52922?se=2023-05-14T17%3A30%3A00Z&sig=0n9j8e2HXVZGgWAQD48BF%
+##################################################################################################################################################################################################### 100.0%
+==> Fetching emacs
+==> Downloading https://ghcr.io/v2/homebrew/core/emacs/manifests/28.2-1
+##################################################################################################################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/emacs/blobs/sha256:41e45b591cec75cee7f9c08355356d35ca92e06eae2ece10b08abc1088798d18
+==> Downloading from https://pkg-containers.githubusercontent.com/ghcr1/blobs/sha256:41e45b591cec75cee7f9c08355356d35ca92e06eae2ece10b08abc1088798d18?se=2023-05-14T17%3A30%3A00Z&sig=b0jpnqsnkrkmDxGCECOW%2
+###########################################                                                                                                                                                            22.3%#####################################################                                                                                                                                                  27.4%^R
+
+emacs
+cd ~
+
+curl: (56) LibreSSL SSL_read: SSL_ERROR_SYSCALL, errno 60
+Error: emacs: Failed to download resource "emacs"
+Download failed: https://ghcr.io/v2/homebrew/core/emacs/blobs/sha256:41e45b591cec75cee7f9c08355356d35ca92e06eae2ece10b08abc1088798d18
+==> `brew cleanup` has not been run in the last 30 days, running now...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+Removing: /Users/josh/Library/Caches/Homebrew/gh--2.24.2... (9.8MB)
+Removing: /Users/josh/Library/Caches/Homebrew/git--2.39.2... (17.3MB)
+Removing: /Users/josh/Library/Logs/Homebrew/gh... (64B)
+Removing: /Users/josh/Library/Logs/Homebrew/gettext... (64B)
+Removing: /Users/josh/Library/Logs/Homebrew/pcre2... (64B)
+Removing: /Users/josh/Library/Logs/Homebrew/git... (64B)
+josh@Joshs-Air ~ % 
+josh@Joshs-Air ~ % emacs
+zsh: command not found: emacs
+josh@Joshs-Air ~ % cd ~
+josh@Joshs-Air ~ %  cd ~
+josh@Joshs-Air ~ % brew install emacs
+==> Downloading https://formulae.brew.sh/api/formula.jws.json
+##################################################################################################################################################################################################### 100.0%
+==> Downloading https://formulae.brew.sh/api/cask.jws.json
+##################################################################################################################################################################################################### 100.0%
+Warning: Treating emacs as a formula. For the cask, use homebrew/cask/emacs
+==> Fetching dependencies for emacs: ca-certificates, gmp, libunistring, libidn2, libtasn1, nettle, p11-kit, openssl@1.1, libevent, libnghttp2, unbound, gnutls and jansson
+==> Fetching ca-certificates
+==> Downloading https://ghcr.io/v2/homebrew/core/ca-certificates/manifests/2023-01-10
+Already downloaded: /Users/josh/Library/Caches/Homebrew/downloads/927414ed081d996b84d938be6af4d2639403b4d2bee3cc29268d0844999da180--ca-certificates-2023-01-10.bottle_manifest.json
+==> Downloading https://ghcr.io/v2/homebrew/core/ca-certificates/blobs/sha256:11fe9d0a98a2ac454fa1db95762a697c3340f46560ff27e5e9db8fdeb003f17e
+Already downloaded: /Users/josh/Library/Caches/Homebrew/downloads/ca2448928ab98c455b5e46d4a6604247a151ab0f4e60553dbb5c6aecd2e1df3c--ca-certificates--2023-01-10.all.bottle.tar.gz
+==> Fetching gmp
+==> Downloading https://ghcr.io/v2/homebrew/core/gmp/manifests/6.2.1_1
+Already downloaded: /Users/josh/Library/Caches/Homebrew/downloads/a1986a80dafb4e42b8372268a00d8d14aa8294154c876ba82e7ce48db06885cb--gmp-6.2.1_1.bottle_manifest.json
+==> Downloading https://ghcr.io/v2/homebrew/core/gmp/blobs/sha256:e566452815d2ff5dc66da160bd1cd3d9cf02a17a07284cf0bac46496133383ae
+Already downloaded: /Users/josh/Library/Caches/Homebrew/downloads/b35c301599402facd4fad83244926c99d9808808a7af196e9e6ec988346395fe--gmp--6.2.1_1.big_sur.bottle.tar.gz
+==> Fetching libunistring
+==> Downloading https://ghcr.io/v2/homebrew/core/libunistring/manifests/1.1
+Already downloaded: /Users/josh/Library/Caches/Homebrew/downloads/a34801f1ad5800ba51b2b3951d82a913ccf0641982f86b02df2f0aa182535055--libunistring-1.1.bottle_manifest.json
+==> Downloading https://ghcr.io/v2/homebrew/core/libunistring/blobs/sha256:55a30f8d2ad0058a9869751ccb9b7e949469cf20f29810e70ff2b7eff63a6762
+Already downloaded: /Users/josh/Library/Caches/Homebrew/downloads/b6b6a568808b5879eb561ea0548e3070ee13346de7b4961b0e6bbbe549a3d045--libunistring--1.1.big_sur.bottle.tar.gz
+==> Fetching libidn2
+==> Downloading https://ghcr.io/v2/homebrew/core/libidn2/manifests/2.3.4_1-1
+Already downloaded: /Users/josh/Library/Caches/Homebrew/downloads/03ad193177f4e7d05ee2ed19a455028cb5fbf7ea1a812d88f18f5e9e8b4a4d43--libidn2-2.3.4_1-1.bottle_manifest.json
+==> Downloading https://ghcr.io/v2/homebrew/core/libidn2/blobs/sha256:234beba5f85ebd599ede74b4963e2cc5d2595e05b15bbe5bd528c8bc852bdc1d
+Already downloaded: /Users/josh/Library/Caches/Homebrew/downloads/fa7eef9345835cd24bcea8698204f6d388e152e695d3567bbd6f5a0d418f0e99--libidn2--2.3.4_1.big_sur.bottle.1.tar.gz
+==> Fetching libtasn1
+==> Downloading https://ghcr.io/v2/homebrew/core/libtasn1/manifests/4.19.0
+Already downloaded: /Users/josh/Library/Caches/Homebrew/downloads/8abecce04f40738bc8a6921a6b96d847ea5c9759185d4bd9c7c9b5fb4922c375--libtasn1-4.19.0.bottle_manifest.json
+==> Downloading https://ghcr.io/v2/homebrew/core/libtasn1/blobs/sha256:45a9352536560b5a69bef3e85ca615bad19d44eab23c6ad797c4305a27bd15d8
+Already downloaded: /Users/josh/Library/Caches/Homebrew/downloads/a87f3c0ad354afc9c15ebfbae823ce845e4d6c46a2f0c1144998b887e764c157--libtasn1--4.19.0.big_sur.bottle.tar.gz
+==> Fetching nettle
+==> Downloading https://ghcr.io/v2/homebrew/core/nettle/manifests/3.8.1
+Already downloaded: /Users/josh/Library/Caches/Homebrew/downloads/657892ddc73ff162bbdf3719382dd74a8cc0b4a22915734797981ac465d9b560--nettle-3.8.1.bottle_manifest.json
+==> Downloading https://ghcr.io/v2/homebrew/core/nettle/blobs/sha256:48493dc5881e45b030b1f39d379fe70d6d8707063766c0f223e20e190d8de4ba
+Already downloaded: /Users/josh/Library/Caches/Homebrew/downloads/f180d917004ccd7330fead4b7a9f23796582fa1667d360834ac71f7d06188c6c--nettle--3.8.1.big_sur.bottle.tar.gz
+==> Fetching p11-kit
+==> Downloading https://ghcr.io/v2/homebrew/core/p11-kit/manifests/0.24.1_1
+Already downloaded: /Users/josh/Library/Caches/Homebrew/downloads/9a320bce3a5d6cf9d58f8bcd02c4df6948c745fe570789a63492ff6fedd0c0a8--p11-kit-0.24.1_1.bottle_manifest.json
+==> Downloading https://ghcr.io/v2/homebrew/core/p11-kit/blobs/sha256:0a34fda3209d79aa796026de51beb48d6a9d2d0e532c2fcd415371291ef29ce0
+Already downloaded: /Users/josh/Library/Caches/Homebrew/downloads/2ed43e855e9b8da088bf690eb789d0356020a4a7387121e577a608924a007bab--p11-kit--0.24.1_1.big_sur.bottle.tar.gz
+==> Fetching openssl@1.1
+==> Downloading https://ghcr.io/v2/homebrew/core/openssl/1.1/manifests/1.1.1t
+Already downloaded: /Users/josh/Library/Caches/Homebrew/downloads/e8519d4f6d202ef928d8abd8368bb1599920846dd8c5d4986fdb9df9497c393f--openssl@1.1-1.1.1t.bottle_manifest.json
+==> Downloading https://ghcr.io/v2/homebrew/core/openssl/1.1/blobs/sha256:c357ccf7ece01905099a0cde58a2bbfb14141edb3aafed7d20391ed6bf726381
+Already downloaded: /Users/josh/Library/Caches/Homebrew/downloads/ea2515deca78bb049562fa6e20f1d6d5e9bd7898fe8ee649c5e539c3d18de536--openssl@1.1--1.1.1t.big_sur.bottle.tar.gz
+==> Fetching libevent
+==> Downloading https://ghcr.io/v2/homebrew/core/libevent/manifests/2.1.12
+Already downloaded: /Users/josh/Library/Caches/Homebrew/downloads/3c922e544a2503896bff89f9c72cda549a57375a38f86b02eff00c1ca31c7754--libevent-2.1.12.bottle_manifest.json
+==> Downloading https://ghcr.io/v2/homebrew/core/libevent/blobs/sha256:45758b448d82b82b6bea52bc9a72593ef22f04ebdaa4b4230cadf12768252e22
+Already downloaded: /Users/josh/Library/Caches/Homebrew/downloads/8c9de0a7bcfeb3d2506c29ff54707e6218716f03ed8a52a0e98056bc29e3c234--libevent--2.1.12.big_sur.bottle.tar.gz
+==> Fetching libnghttp2
+==> Downloading https://ghcr.io/v2/homebrew/core/libnghttp2/manifests/1.53.0
+Already downloaded: /Users/josh/Library/Caches/Homebrew/downloads/2f1687835984854a457a19ee4e22dffbf886766c59dca55b202c81839a0fe361--libnghttp2-1.53.0.bottle_manifest.json
+==> Downloading https://ghcr.io/v2/homebrew/core/libnghttp2/blobs/sha256:3faee6450d6445d7fed1413ac1b8039e94fce368ff8b3e0c03b3f35ff92cef25
+Already downloaded: /Users/josh/Library/Caches/Homebrew/downloads/d54eb6012b2114ca63b7edb7e4243ec32c08d788026a0997c63f89b1b19835f1--libnghttp2--1.53.0.big_sur.bottle.tar.gz
+==> Fetching unbound
+==> Downloading https://ghcr.io/v2/homebrew/core/unbound/manifests/1.17.1
+Already downloaded: /Users/josh/Library/Caches/Homebrew/downloads/c214ae0e6795dc6c66cd623c6198d044492059d3b9315f5f809efaaad64e9b24--unbound-1.17.1.bottle_manifest.json
+==> Downloading https://ghcr.io/v2/homebrew/core/unbound/blobs/sha256:55e865da9441e948209a775239c4217bd7d67aa6be6f18d1e794d078af7be1c7
+Already downloaded: /Users/josh/Library/Caches/Homebrew/downloads/5e9bba8d768cb230c683e4445d48d74332f8f8e684c04faaa3bdb6c5b214835a--unbound--1.17.1.big_sur.bottle.tar.gz
+==> Fetching gnutls
+==> Downloading https://ghcr.io/v2/homebrew/core/gnutls/manifests/3.8.0
+Already downloaded: /Users/josh/Library/Caches/Homebrew/downloads/b0ff3eb046381b54f16325d6fd394fb64f2d0fb28a675caa209f0c740d51caab--gnutls-3.8.0.bottle_manifest.json
+==> Downloading https://ghcr.io/v2/homebrew/core/gnutls/blobs/sha256:d1cddbab50cd28e1e84b57bb3c08e76c204626894bebf044c80fdb3c44d8a577
+Already downloaded: /Users/josh/Library/Caches/Homebrew/downloads/62c9360b7688b619da5a870f98ab731848ba09c5e6afb049b798954729d5945b--gnutls--3.8.0.big_sur.bottle.tar.gz
+==> Fetching jansson
+==> Downloading https://ghcr.io/v2/homebrew/core/jansson/manifests/2.14
+Already downloaded: /Users/josh/Library/Caches/Homebrew/downloads/dcf5fb966d90746cd91204b1e9c96d935d2541ea00ccc8209f6017f684e838cd--jansson-2.14.bottle_manifest.json
+==> Downloading https://ghcr.io/v2/homebrew/core/jansson/blobs/sha256:bb129dc922c0610c35a7b161429033a9123f03c4171df35717ff086b9cb52922
+Already downloaded: /Users/josh/Library/Caches/Homebrew/downloads/195a948e3d4e8bd0843e9e2a9739eb1a1996f3dba1738767c7b58c53e3bb52a5--jansson--2.14.big_sur.bottle.tar.gz
+==> Fetching emacs
+==> Downloading https://ghcr.io/v2/homebrew/core/emacs/manifests/28.2-1
+Already downloaded: /Users/josh/Library/Caches/Homebrew/downloads/3de89050bf5494b1b18a2789972b4cf9a83bdf8f7f1fea76dc7204f4e6363a4b--emacs-28.2-1.bottle_manifest.json
+==> Downloading https://ghcr.io/v2/homebrew/core/emacs/blobs/sha256:41e45b591cec75cee7f9c08355356d35ca92e06eae2ece10b08abc1088798d18
+==> Downloading from https://pkg-containers.githubusercontent.com/ghcr1/blobs/sha256:41e45b591cec75cee7f9c08355356d35ca92e06eae2ece10b08abc1088798d18?se=2023-05-14T17%3A55%3A00Z&sig=YMiovoqPP2wm0%2B8GtdgW
+##################################################################################################################################################################################################### 100.0%
+==> Installing dependencies for emacs: ca-certificates, gmp, libunistring, libidn2, libtasn1, nettle, p11-kit, openssl@1.1, libevent, libnghttp2, unbound, gnutls and jansson
+==> Installing emacs dependency: ca-certificates
+==> Pouring ca-certificates--2023-01-10.all.bottle.tar.gz
+==> Regenerating CA certificate bundle from keychain, this may take a while...
+🍺  /usr/local/Cellar/ca-certificates/2023-01-10: 3 files, 216.9KB
+==> Installing emacs dependency: gmp
+==> Pouring gmp--6.2.1_1.big_sur.bottle.tar.gz
+🍺  /usr/local/Cellar/gmp/6.2.1_1: 21 files, 3.3MB
+==> Installing emacs dependency: libunistring
+==> Pouring libunistring--1.1.big_sur.bottle.tar.gz
+🍺  /usr/local/Cellar/libunistring/1.1: 56 files, 4.9MB
+==> Installing emacs dependency: libidn2
+==> Pouring libidn2--2.3.4_1.big_sur.bottle.1.tar.gz
+🍺  /usr/local/Cellar/libidn2/2.3.4_1: 79 files, 1003.8KB
+==> Installing emacs dependency: libtasn1
+==> Pouring libtasn1--4.19.0.big_sur.bottle.tar.gz
+🍺  /usr/local/Cellar/libtasn1/4.19.0: 61 files, 658.2KB
+==> Installing emacs dependency: nettle
+==> Pouring nettle--3.8.1.big_sur.bottle.tar.gz
+🍺  /usr/local/Cellar/nettle/3.8.1: 91 files, 2.8MB
+==> Installing emacs dependency: p11-kit
+==> Pouring p11-kit--0.24.1_1.big_sur.bottle.tar.gz
+🍺  /usr/local/Cellar/p11-kit/0.24.1_1: 67 files, 3.6MB
+==> Installing emacs dependency: openssl@1.1
+==> Pouring openssl@1.1--1.1.1t.big_sur.bottle.tar.gz
+🍺  /usr/local/Cellar/openssl@1.1/1.1.1t: 8,101 files, 18.5MB
+==> Installing emacs dependency: libevent
+==> Pouring libevent--2.1.12.big_sur.bottle.tar.gz
+🍺  /usr/local/Cellar/libevent/2.1.12: 57 files, 2MB
+==> Installing emacs dependency: libnghttp2
+==> Pouring libnghttp2--1.53.0.big_sur.bottle.tar.gz
+🍺  /usr/local/Cellar/libnghttp2/1.53.0: 13 files, 720.8KB
+==> Installing emacs dependency: unbound
+==> Pouring unbound--1.17.1.big_sur.bottle.tar.gz
+🍺  /usr/local/Cellar/unbound/1.17.1: 58 files, 5.9MB
+==> Installing emacs dependency: gnutls
+==> Pouring gnutls--3.8.0.big_sur.bottle.tar.gz
+🍺  /usr/local/Cellar/gnutls/3.8.0: 1,281 files, 10.6MB
+==> Installing emacs dependency: jansson
+==> Pouring jansson--2.14.big_sur.bottle.tar.gz
+🍺  /usr/local/Cellar/jansson/2.14: 11 files, 210KB
+==> Installing emacs
+==> Pouring emacs--28.2.big_sur.bottle.1.tar.gz
+==> Caveats
+To restart emacs after an upgrade:
+  brew services restart emacs
+Or, if you don't want/need a background service you can just run:
+  /usr/local/opt/emacs/bin/emacs --fg-daemon
+==> Summary
+🍺  /usr/local/Cellar/emacs/28.2: 4,097 files, 110.4MB
+==> Running `brew cleanup emacs`...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+==> Caveats
+==> emacs
+To restart emacs after an upgrade:
+  brew services restart emacs
+Or, if you don't want/need a background service you can just run:
+  /usr/local/opt/emacs/bin/emacs --fg-daemon
+josh@Joshs-Air ~ % brew services restart emacs
+==> Tapping homebrew/services
+Cloning into '/usr/local/Homebrew/Library/Taps/homebrew/homebrew-services'...
+remote: Enumerating objects: 2430, done.
+remote: Counting objects: 100% (2430/2430), done.
+remote: Compressing objects: 100% (1144/1144), done.
+remote: Total 2430 (delta 1132), reused 2339 (delta 1098), pack-reused 0
+Receiving objects: 100% (2430/2430), 663.95 KiB | 506.00 KiB/s, done.
+Resolving deltas: 100% (1132/1132), done.
+Tapped 1 command (45 files, 832.1KB).
+==> Successfully started `emacs` (label: homebrew.mxcl.emacs)
+josh@Joshs-Air ~ % cd ~
+josh@Joshs-Air ~ % ls
+Applications			Documents			Library				Music				Public				zero_day
+Desktop				Downloads			Movies				Pictures			monsterinsights-user-journey
+josh@Joshs-Air ~ % cd zero_day
+josh@Joshs-Air zero_day % ls
+README.md
+josh@Joshs-Air zero_day % emacs README.md
+
+File Edit Options Buffers Tools Help                                                                                                                                                                        
+# My Project
+
+This project is a small example project that demonstrates how to use Git and Markdown. It includes a README file and some sample code.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-UUU:**--F1  README.md      All L4     (Fundamental) -------------------------------------------------------------------------------------------------------------------------------------------------------
+Auto-saving...done
